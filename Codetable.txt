@@ -1,0 +1,97 @@
+The program r_analysis.R unzips the datafile Dataset.zip in the current directory
+and merges the test and the training datasets(specifically, X_train.txt, X_test.txt,
+y_train.txt, y_test.txt, subject_train.txt, subject_test.txt, and activity_labels.txt).
+
+The Activity name is substituted in place of Activity Id. The mapping of Activity Id
+to Activity Name is obtained from activity_labels.txt.
+
+The feature vector columns containing mean or standard deviation data are selected
+and averaged over Subject and Activity.
+
+Please refer to the source data description in the files source_readme.txt,
+source_features.txt and source_feature_info.txt.
+
+File Structure of Tidysams.csv, the output file of r_analysis.R (81 columns)
+===========================
+
+Subject					Numeric
+Activity				Character
+avg.tBodyAcc.mean.X			Numeric
+avg.tBodyAcc.mean.Y			Numeric
+avg.tBodyAcc.mean.Z			Numeric
+avg.tBodyAcc.std.X			Numeric
+avg.tBodyAcc.std.Y			Numeric
+avg.tBodyAcc.std.Z			Numeric
+avg.tGravityAcc.mean.X			Numeric
+avg.tGravityAcc.mean.Y			Numeric
+avg.tGravityAcc.mean.Z			Numeric
+avg.tGravityAcc.std.X			Numeric
+avg.tGravityAcc.std.Y			Numeric
+avg.tGravityAcc.std.Z			Numeric
+avg.tBodyAccJerk.mean.X			Numeric
+avg.tBodyAccJerk.mean.Y			Numeric
+avg.tBodyAccJerk.mean.Z			Numeric
+avg.tBodyAccJerk.std.X			Numeric
+avg.tBodyAccJerk.std.Y			Numeric
+avg.tBodyAccJerk.std.Z			Numeric
+avg.tBodyGyro.mean.X			Numeric
+avg.tBodyGyro.mean.Y			Numeric
+avg.tBodyGyro.mean.Z			Numeric
+avg.tBodyGyro.std.X			Numeric
+avg.tBodyGyro.std.Y			Numeric
+avg.tBodyGyro.std.Z			Numeric
+avg.tBodyGyroJerk.mean.X		Numeric
+avg.tBodyGyroJerk.mean.Y		Numeric
+avg.tBodyGyroJerk.mean.Z		Numeric
+avg.tBodyGyroJerk.std.X			Numeric
+avg.tBodyGyroJerk.std.Y			Numeric
+avg.tBodyGyroJerk.std.Z			Numeric
+avg.tBodyAccMag.mean			Numeric
+avg.tBodyAccMag.std			Numeric
+avg.tGravityAccMag.mean			Numeric
+avg.tGravityAccMag.std			Numeric
+avg.tBodyAccJerkMag.mean		Numeric
+avg.tBodyAccJerkMag.std			Numeric
+avg.tBodyGyroMag.mean			Numeric
+avg.tBodyGyroMag.std			Numeric
+avg.tBodyGyroJerkMag.mean		Numeric
+avg.tBodyGyroJerkMag.std		Numeric
+avg.fBodyAcc.mean.X			Numeric
+avg.fBodyAcc.mean.Y			Numeric
+avg.fBodyAcc.mean.Z			Numeric
+avg.fBodyAcc.std.X			Numeric
+avg.fBodyAcc.std.Y			Numeric
+avg.fBodyAcc.std.Z			Numeric
+avg.fBodyAcc.meanFreq.X			Numeric
+avg.fBodyAcc.meanFreq.Y			Numeric
+avg.fBodyAcc.meanFreq.Z			Numeric
+avg.fBodyAccJerk.mean.X			Numeric
+avg.fBodyAccJerk.mean.Y			Numeric
+avg.fBodyAccJerk.mean.Z			Numeric
+avg.fBodyAccJerk.std.X			Numeric
+avg.fBodyAccJerk.std.Y			Numeric
+avg.fBodyAccJerk.std.Z			Numeric
+avg.fBodyAccJerk.meanFreq.X		Numeric
+avg.fBodyAccJerk.meanFreq.Y		Numeric
+avg.fBodyAccJerk.meanFreq.Z		Numeric
+avg.fBodyGyro.mean.X			Numeric
+avg.fBodyGyro.mean.Y			Numeric
+avg.fBodyGyro.mean.Z			Numeric
+avg.fBodyGyro.std.X			Numeric
+avg.fBodyGyro.std.Y			Numeric
+avg.fBodyGyro.std.Z			Numeric
+avg.fBodyGyro.meanFreq.X		Numeric
+avg.fBodyGyro.meanFreq.Y		Numeric
+avg.fBodyGyro.meanFreq.Z		Numeric
+avg.fBodyAccMag.mean			Numeric
+avg.fBodyAccMag.std			Numeric
+avg.fBodyAccMag.meanFreq		Numeric
+avg.fBodyBodyAccJerkMag.mean		Numeric
+avg.fBodyBodyAccJerkMag.std		Numeric
+avg.fBodyBodyAccJerkMag.meanFreq	Numeric
+avg.fBodyBodyGyroMag.mean		Numeric
+avg.fBodyBodyGyroMag.std		Numeric
+avg.fBodyBodyGyroMag.meanFreq		Numeric
+avg.fBodyBodyGyroJerkMag.mean		Numeric
+avg.fBodyBodyGyroJerkMag.std		Numeric
+avg.fBodyBodyGyroJerkMag.meanFreq	Numeric
